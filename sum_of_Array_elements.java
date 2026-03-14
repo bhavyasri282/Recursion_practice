@@ -1,11 +1,11 @@
 import java.util.*;
-public class printing_array_elements 3{
-    static void printArrayele(int arr[],int i,int n){
+public class sum_of_Array_elements {
+    static int sum(int arr[],int i,int n){
         if(i>=n){
-            return;
+            return 0;
         }
-        System.out.print(arr[i]+" ");
-        printArrayele(arr,i+1,n);
+        return arr[i]+sum(arr,i+1,n);
+        
     }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
@@ -16,7 +16,7 @@ public class printing_array_elements 3{
         for(int i=0;i<arr.length;i++){
             arr[i]=sc.nextInt();
         }
-        
-        printArrayele(arr,0,arr.length);
+        System.out.println("The sum of Array elements is:");
+        System.out.println(sum(arr,0,arr.length));
     }
 }
