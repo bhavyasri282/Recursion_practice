@@ -1,4 +1,4 @@
-public class reverse_of_array {
+public class swap {
     static void reverse(int arr[],int left,int right){
         if(left>right){
             return;
